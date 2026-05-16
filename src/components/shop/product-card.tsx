@@ -5,6 +5,8 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { DzdrMerchMark } from "@/components/brand/brand-logo";
+import { PriceTag } from "@/components/shop/price-tag";
 import type { Product } from "@/lib/products";
 import { useCartStore } from "@/store/cart";
 import { WishlistHeart } from "@/components/shop/wishlist-heart";
@@ -30,17 +32,14 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
           sizes="(max-width: 768px) 50vw, 33vw"
           placeholder="blur"
           blurDataURL={product.blurDataURL}
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
+          className="object-cover brightness-[0.72] transition-transform duration-500 group-hover:scale-[1.06] group-hover:brightness-90"
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10" />
 
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <div className="rounded-2xl border border-white/10 bg-black/45 px-4 py-3 text-center backdrop-blur-md">
-            <div className="font-display text-2xl font-black tracking-[0.35em] text-white">
-              G <span className="text-gzdr-lime">Z</span> D <span className="text-gzdr-fuchsia">R</span> I
-            </div>
-            <div className="mt-1 text-xs tracking-[0.55em] text-white/70">style</div>
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-4">
+          <div className="rounded-xl border border-white/10 bg-black/35 px-5 py-4 backdrop-blur-sm transition-all duration-300 group-hover:border-gzdr-fuchsia/40 group-hover:bg-black/50 group-hover:shadow-[0_0_30px_rgb(255_0_170/0.25)]">
+            <DzdrMerchMark size="lg" />
           </div>
         </div>
 
@@ -60,11 +59,11 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
         </div>
 
         <div className="flex items-center justify-between gap-3">
-          <div className="font-display text-lg font-black text-gzdr-gold">€{product.priceEur.toFixed(2)}</div>
+          <PriceTag eur={product.priceEur} />
           <Button
             type="button"
             variant="default"
-            className={cn("glitch-hover")}
+            className={cn("glitch-hover shrink-0")}
             data-text="Añadir"
             onClick={() => add(product, 1)}
           >
@@ -76,3 +75,4 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
     </motion.div>
   );
 }
+

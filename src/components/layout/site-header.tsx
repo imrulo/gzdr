@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, ShoppingBag } from "lucide-react";
-import { GzdriMark } from "@/components/brand/gzdri-logo";
+import { GzdrMark } from "@/components/brand/brand-logo";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { CartDrawer } from "@/components/shop/cart-drawer";
@@ -30,7 +30,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-gzdr-border/80 bg-gzdr-bg/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
         <Link href="/" className="flex items-center gap-2">
-          <GzdriMark className="h-8" />
+          <GzdrMark className="h-8" />
           <span className="sr-only">GZDR — Gozadera</span>
         </Link>
 

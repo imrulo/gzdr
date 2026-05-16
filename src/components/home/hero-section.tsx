@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { GzdriLogo } from "@/components/brand/gzdri-logo";
+import { GzdrLogo } from "@/components/brand/brand-logo";
 import { Button } from "@/components/ui/button";
 import { Countdown } from "@/components/home/countdown";
 import { events } from "@/lib/events";
@@ -52,7 +52,7 @@ export function HeroSection() {
 
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <GzdriLogo size="xl" />
+            <GzdrLogo size="xl" />
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl">
               Ni terapia, ni yoga. Solo ritmo latino, sudor y pura Gozadera.
             </p>

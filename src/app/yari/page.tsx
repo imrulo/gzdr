@@ -4,7 +4,7 @@ import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "El Creador — El Yari Gozadera",
-  description: "Yari Rodríguez (El Yari Gozadera): historia, visión y energía detrás de GZDR en Belgrade.",
+  description: "Yari Rodríguez (@el_yari_gozadera): creador de Gozadera, DJ y alma de GZDR en Belgrade.",
   alternates: { canonical: "/yari" },
   openGraph: {
     url: `${siteUrl}/yari`,
@@ -30,7 +30,17 @@ export default function YariPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5">
               <div className="font-display text-3xl font-black">El Yari Gozadera</div>
-              <div className="mt-1 text-sm text-white/70">Yari Rodríguez · DJ · curadoría latina</div>
+              <div className="mt-1 text-sm text-white/70">
+                Yari Rodríguez ·{" "}
+                <a
+                  href="https://instagram.com/el_yari_gozadera"
+                  className="text-gzdr-lime hover:underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @el_yari_gozadera
+                </a>
+              </div>
             </div>
           </div>
         </div>

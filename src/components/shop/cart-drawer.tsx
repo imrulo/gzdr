@@ -7,7 +7,9 @@ import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetT
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { formatDualPrice } from "@/lib/currency";
 import { cartSubtotal, useCartStore } from "@/store/cart";
+import { PriceTag } from "@/components/shop/price-tag";
 
 export function CartDrawer({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) {
   const lines = useCartStore((s) => s.lines);
@@ -66,7 +68,9 @@ export function CartDrawer({ open, onOpenChange }: { open: boolean; onOpenChange
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="truncate font-semibold">{l.product.name}</div>
-                    <div className="mt-1 text-sm text-white/60">€{l.product.priceEur.toFixed(2)}</div>
+                    <div className="mt-1">
+                      <PriceTag eur={l.product.priceEur} size="sm" />
+                    </div>
                     <div className="mt-3 flex items-center gap-2">
                       <Button
                         type="button"
@@ -118,9 +122,12 @@ export function CartDrawer({ open, onOpenChange }: { open: boolean; onOpenChange
               <span className="text-white">€{shipping.toFixed(2)}</span>
             </div>
             <Separator className="my-3" />
-            <div className="flex justify-between font-display text-base font-bold">
+            <div className="flex flex-col gap-1 font-display text-base font-bold sm:flex-row sm:justify-between sm:items-end">
               <span>Total</span>
-              <span className="text-gzdr-lime">€{total.toFixed(2)}</span>
+              <div className="text-right">
+                <div className="text-gzdr-lime">{formatDualPrice(total).eur}</div>
+                <div className="text-xs font-normal text-white/55">{formatDualPrice(total).rsd}</div>
+              </div>
             </div>
           </div>
 

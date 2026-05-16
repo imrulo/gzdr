@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Instagram, Mail } from "lucide-react";
-import { GzdriLogo } from "@/components/brand/gzdri-logo";
+import { GzdrLogo } from "@/components/brand/brand-logo";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-gzdr-border bg-gzdr-surface/40">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-3">
         <div>
-          <GzdriLogo size="sm" />
+          <GzdrLogo size="sm" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
             La Gozadera Events representa mucho más que fiestas; es una experiencia donde la música, la energía y la
             cultura se unen. Gozadera Style es libertad, energía y actitud: vestir con alegría y sin reglas.
@@ -55,12 +55,21 @@ export function SiteFooter() {
             </a>
             <a
               className="inline-flex items-center gap-2 rounded-md border border-gzdr-border px-3 py-2 hover:border-gzdr-fuchsia/50 hover:text-gzdr-fuchsia"
-              href="https://instagram.com"
+              href="https://instagram.com/la_gozadera_events"
               target="_blank"
               rel="noreferrer"
             >
               <Instagram className="h-4 w-4" />
-              Instagram
+              @la_gozadera_events
+            </a>
+            <a
+              className="inline-flex items-center gap-2 rounded-md border border-gzdr-border px-3 py-2 hover:border-gzdr-lime/50 hover:text-gzdr-lime"
+              href="https://instagram.com/gozadera_style"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Instagram className="h-4 w-4" />
+              @gozadera_style
             </a>
           </div>
           <p className="mt-6 text-xs text-white/45">

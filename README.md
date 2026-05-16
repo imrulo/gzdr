@@ -1,85 +1,118 @@
-# GZDR — `gzdr-live`
+# gzdr-live — GZDR / Gozadera
 
-Web oficial de **GZDR (Gozadera)** para el dominio **`gzdr.live`**: eventos de reggaetón/perreo latino + tienda **Gozadera Style** (Belgrade, Serbia).
+Web oficial de **GZDR** para **gzdr.live**: eventos de reggaetón y perreo latino + tienda **Gozadera Style** (Belgrade, Serbia).
 
-Stack: **Next.js 16 (App Router)**, **React 19**, **TypeScript strict**, **Tailwind CSS v4**, **shadcn/ui-style components**, **Framer Motion 12**, **Clerk** (opcional sin keys), **Zustand** (carrito + wishlist), **Vercel Analytics + Speed Insights**, **next-seo + Metadata API**, **next/image** con blur placeholders.
+## Branding
+
+| Contexto | Logo |
+|----------|------|
+| Sitio web, header, hero, OG | **GZDR** + *style* (pequeño) |
+| Merch / ropa / mockups tienda | **DZDR** (exacto, en todas las prendas) |
+
+## Stack
+
+- **Next.js 16** (App Router, Server Actions, Cache Components / PPR)
+- **React 19** · **TypeScript** strict
+- **Tailwind CSS v4** · componentes estilo **shadcn/ui**
+- **Framer Motion 12** · **Lucide**
+- **Clerk** (auth opcional) · **Zustand** (carrito + wishlist)
+- **Vercel Analytics** + **Speed Insights**
+- SEO: **Metadata API** + `sitemap.xml` + `robots.txt` + OG images
+- **next/image** con blur placeholders
 
 ## Requisitos
 
-- **Node.js 22+** (recomendado para Next 16)
-- **pnpm** (recomendado) o npm/yarn
+- Node.js **22+**
+- npm, pnpm o yarn
 
 ## Desarrollo local
 
 ```bash
 cd gzdr-live
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
-Abre `http://localhost:3000`.
+Abre **http://localhost:3000**.
 
-### Variables de entorno (opcional)
+### Variables de entorno
 
-Copia `.env.example` a `.env.local` y rellena:
+Copia `.env.example` → `.env.local`:
 
-- **Clerk** (auth moderna): `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`, `CLERK_SECRET_KEY`  
-  Si no las pones, la web funciona en modo público (sin auth) y el `proxy.ts` hace bypass.
-- **Stripe (test)**: `STRIPE_SECRET_KEY` (ver `src/app/api/checkout/route.ts`, comentado).
-- **Dominio canónico** (opcional): `NEXT_PUBLIC_SITE_URL=https://gzdr.live`
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+STRIPE_SECRET_KEY=
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
 
-## Build producción
+Sin Clerk la web funciona en modo público.
+
+## Build
 
 ```bash
-pnpm build
-pnpm start
+npm run build
+npm start
 ```
 
 ## Deploy en Vercel
 
-1. Crea un proyecto en Vercel e importa el repo `gzdr-live`.
-2. Framework: **Next.js**.
-3. Añade variables de entorno (Clerk/Stripe si aplica).
-4. Deploy.
+1. Importa el repo **gzdr-live** (o `imrulo/gzdr`) en [vercel.com](https://vercel.com).
+2. Framework: **Next.js** (auto).
+3. Añade variables de entorno de producción.
+4. Deploy → asigna dominio `gzdr.live`.
 
-`vercel.json` añade cabeceras de seguridad básicas. Ajusta si necesitas políticas distintas.
+## Dominio gzdr.live con Cloudflare
 
-## Dominio `gzdr.live` con Cloudflare (DNS)
+1. **Cloudflare** → zona `gzdr.live` → **DNS**:
+   - Registro **CNAME** `@` → `cname.vercel-dns.com` (o el target que indique Vercel en *Domains*).
+   - Opcional: `www` → mismo target o redirect.
+2. **Vercel** → proyecto → **Settings** → **Domains** → añade `gzdr.live` y `www.gzdr.live`.
+3. **SSL/TLS** en Cloudflare: **Full (strict)** cuando Vercel emita el certificado.
+4. Desactiva **Rocket Loader** si ves problemas de hidratación.
+5. Propagación DNS: hasta 24 h (normalmente minutos).
 
-1. En **Cloudflare** → tu zona `gzdr.live` → **DNS**:
-   - Crea un registro **CNAME**:
-     - **Name**: `@` (o `www` si quieres subdominio)
-     - **Target**: `cname.vercel-dns.com` (Vercel te mostrará el target exacto en *Domains*)
-2. En **Vercel** → *Project* → **Domains** → añade `gzdr.live` (y `www.gzdr.live` si quieres).
-3. En Cloudflare, **SSL/TLS**:
-   - Modo recomendado: **Full (strict)** cuando el certificado de Vercel esté activo.
-4. Opcional: desactiva **Rocket Loader** y proxies que rompan hydration si ves comportamientos raros (poco frecuente).
+## Reemplazar placeholders por contenido real
 
-## SEO
+### Eventos (`src/lib/events.ts`)
 
-- Metadata en `src/app/layout.tsx` + `generateMetadata` por ruta.
-- `next-seo` (`DefaultSeo`) en `src/components/providers/app-providers.tsx`.
-- `src/app/sitemap.ts`, `src/app/robots.ts`, `opengraph-image.tsx`, `twitter-image.tsx`, `icon.tsx`.
+- Sube flyers a `public/eventos/`.
+- Cambia `flyerSrc` a `/eventos/mi-fiesta.jpg`.
+- Fechas en ISO con zona `+02:00` (Belgrade).
 
-## Rendimiento / Lighthouse
+### Galería (`src/lib/gallery.ts`)
 
-- Imágenes remotas permitidas en `next.config.ts` (`images.remotePatterns`).
-- `next/image` + `placeholder="blur"` en catálogo.
-- Vídeo hero: si quieres 100% self-hosted, descarga el clip a `public/` y cambia el `<source>` en `src/components/home/hero-section.tsx`.
+- Fotos reales de @la_gozadera_events → `public/galeria/`.
+- Mantén `blurDataURL` (genera con [plaiceholder](https://github.com/joe-bell/plaiceholder) o similar).
 
-## Añadir productos y fotos reales
+### Tienda (`src/lib/products.ts`)
 
-1. **Productos**: edita `src/lib/products.ts`
-   - Sustituye `imageSrc` por rutas `"/productos/....jpg"` en `public/productos/`.
-   - Genera `blurDataURL` pequeño (p. ej. con `plaiceholder` o un base64 tiny) para mantener el blur.
-2. **Eventos**: edita `src/lib/events.ts` (fechas ISO, flyers).
-3. **Galería**: edita `src/lib/gallery.ts`.
-4. **Checkout real**: descomenta Stripe en `src/app/api/checkout/route.ts` y conecta precios reales (Stripe Prices).
+- Fotos de producto con **logo DZDR** visible → `public/productos/`.
+- Precios en `priceEur`; RSD se calcula con `EUR_TO_RSD` en `src/lib/currency.ts` (ajusta el tipo de cambio).
 
-## Audio opcional
+### Hero video
 
-Coloca `public/audio/vibe.mp3` (ver `public/audio/README.txt`).
+- Descarga clip propio a `public/video/hero.mp4` y edita `src/components/home/hero-section.tsx`.
+
+### Audio
+
+- Coloca `public/audio/vibe.mp3` (instrumental bajito).
+
+### Stripe (checkout real)
+
+Descomenta el bloque en `src/app/api/checkout/route.ts` y configura `STRIPE_SECRET_KEY` + Prices en Stripe Dashboard (modo test).
+
+## Estructura de rutas
+
+| Ruta | Descripción |
+|------|-------------|
+| `/` | Home + countdown + hero |
+| `/eventos` | Eventos Belgrade |
+| `/style` | Tienda DZDR |
+| `/yari` | El Creador |
+| `/galeria` | Fotos fiesta |
+| `/contacto` | Boletín / contacto |
 
 ## Licencia
 
-Privado por defecto (proyecto de marca). Ajusta según tu repo.
+Privado — marca GZDR / Gozadera.

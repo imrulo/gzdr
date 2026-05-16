@@ -7,6 +7,7 @@ import { ProductCard } from "@/components/shop/product-card";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
+import { formatDualPrice } from "@/lib/currency";
 import { useWishlistStore } from "@/store/wishlist";
 import Image from "next/image";
 import Link from "next/link";
@@ -90,7 +91,9 @@ export function StyleShop() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="truncate text-sm font-semibold">{p.name}</div>
-                        <div className="text-xs text-white/55">€{p.priceEur.toFixed(2)}</div>
+                        <div className="text-xs text-white/55">
+                          {formatDualPrice(p.priceEur).eur} · {formatDualPrice(p.priceEur).rsd}
+                        </div>
                       </div>
                       <Button asChild size="sm" variant="outline">
                         <Link href="#catalogo">Ver</Link>
