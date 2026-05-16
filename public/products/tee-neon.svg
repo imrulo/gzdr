@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#0b0b0b"/>
+  <rect x="200" y="260" width="800" height="640" rx="64" fill="#121212" stroke="#ff00aa" stroke-opacity="0.35" stroke-width="5"/>
+  <text x="240" y="600" font-family="Arial Black, sans-serif" font-size="108" fill="#ffffff" letter-spacing="12">G  Z  D  R  I</text>
+  <text x="240" y="680" font-family="Arial, sans-serif" font-size="42" fill="#ffd700" opacity="0.72" letter-spacing="18">STYLE</text>
+  <text x="240" y="880" font-family="Arial, sans-serif" font-size="34" fill="#39ff14" opacity="0.55">Ne�n sudor � oversize</text>
+</svg>

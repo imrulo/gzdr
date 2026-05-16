@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#0a0a0a"/>
+  <rect x="520" y="260" width="520" height="420" rx="140" fill="#101010" stroke="#39ff14" stroke-opacity="0.22" stroke-width="5"/>
+  <rect x="620" y="360" width="320" height="220" rx="70" fill="#151515" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
+  <text x="650" y="500" font-family="Arial Black, sans-serif" font-size="70" fill="#ffffff" letter-spacing="10">GZDRI</text>
+  <text x="650" y="555" font-family="Arial, sans-serif" font-size="30" fill="#ffd700" opacity="0.75" letter-spacing="12">STYLE</text>
+  <text x="260" y="820" font-family="Arial Black, sans-serif" font-size="110" fill="#ffffff">G</text>
+  <text x="380" y="820" font-family="Arial Black, sans-serif" font-size="110" fill="#39ff14">Z</text>
+  <text x="500" y="820" font-family="Arial Black, sans-serif" font-size="110" fill="#ffd700">D</text>
+  <text x="620" y="820" font-family="Arial Black, sans-serif" font-size="110" fill="#ff00aa">R</text>
+  <text x="740" y="820" font-family="Arial Black, sans-serif" font-size="110" fill="#ffffff">I</text>
+  <text x="260" y="920" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" opacity="0.55" letter-spacing="18">Trucker � mesh back</text>
+</svg>

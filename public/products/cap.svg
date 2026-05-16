@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#140014"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <ellipse cx="600" cy="520" rx="520" ry="300" fill="#111111" stroke="#39ff14" stroke-opacity="0.35" stroke-width="4"/>
+  <path d="M260 600c120-220 520-220 680 0" fill="none" stroke="#ff00aa" stroke-width="8" stroke-opacity="0.35"/>
+  <text x="120" y="730" font-family="Arial Black, sans-serif" font-size="120" fill="#ffffff">G</text>
+  <text x="260" y="730" font-family="Arial Black, sans-serif" font-size="120" fill="#39ff14">Z</text>
+  <text x="400" y="730" font-family="Arial Black, sans-serif" font-size="120" fill="#ffd700">D</text>
+  <text x="540" y="730" font-family="Arial Black, sans-serif" font-size="120" fill="#ff00aa">R</text>
+  <text x="680" y="730" font-family="Arial Black, sans-serif" font-size="120" fill="#ffffff">I</text>
+  <text x="120" y="820" font-family="Arial, sans-serif" font-size="44" fill="#ffffff" opacity="0.65" letter-spacing="20">STYLE</text>
+  <text x="120" y="980" font-family="Arial, sans-serif" font-size="34" fill="#ffffff" opacity="0.45">Snapback mockup � Gozadera Style</text>
+</svg>

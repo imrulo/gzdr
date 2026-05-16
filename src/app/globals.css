@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gzdr-bg: #0a0a0a;
+  --color-gzdr-surface: #111111;
+  --color-gzdr-elevated: #161616;
+  --color-gzdr-border: #242424;
+  --color-gzdr-lime: #39ff14;
+  --color-gzdr-fuchsia: #ff00aa;
+  --color-gzdr-gold: #ffd700;
+  --color-gzdr-fire: #ff2b2b;
+  --color-gzdr-white: #fafafa;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --shadow-neon-lime: 0 0 20px rgb(57 255 20 / 0.45);
+  --shadow-neon-fuchsia: 0 0 24px rgb(255 0 170 / 0.45);
+  --shadow-neon-gold: 0 0 22px rgb(255 215 0 / 0.35);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-gzdr-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-gzdr-bg text-gzdr-white antialiased;
+    font-family: var(--font-sans);
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-gzdr-fuchsia) 55%, transparent);
+    color: var(--color-gzdr-bg);
+  }
+
+  a,
+  button,
+  input[type="submit"],
+  summary,
+  [role="button"] {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Ccircle cx='14' cy='14' r='10' stroke='%2339ff14' stroke-width='2'/%3E%3Ccircle cx='14' cy='14' r='3' fill='%23ff00aa'/%3E%3C/svg%3E")
+        14 14,
+      pointer;
+  }
+}
+
+@layer utilities {
+  .text-glow-lime {
+    text-shadow:
+      0 0 12px rgb(57 255 20 / 0.65),
+      0 0 32px rgb(57 255 20 / 0.35);
+  }
+  .text-glow-fuchsia {
+    text-shadow:
+      0 0 14px rgb(255 0 170 / 0.65),
+      0 0 36px rgb(255 0 170 / 0.35);
+  }
+  .text-glow-gold {
+    text-shadow:
+      0 0 12px rgb(255 215 0 / 0.55),
+      0 0 28px rgb(255 215 0 / 0.28);
+  }
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  }
+  .glitch-hover {
+    position: relative;
+  }
+  .glitch-hover::before,
+  .glitch-hover::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .glitch-hover::before {
+    color: var(--color-gzdr-lime);
+    transform: translate(1px, -1px);
+    mix-blend-mode: screen;
+  }
+  .glitch-hover::after {
+    color: var(--color-gzdr-fuchsia);
+    transform: translate(-1px, 1px);
+    mix-blend-mode: screen;
+  }
+  .glitch-hover:hover::before,
+  .glitch-hover:hover::after {
+    opacity: 0.55;
+  }
+}
+
+@keyframes pulse-grid {
+  0% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+
+.animate-pulse-grid {
+  animation: pulse-grid 4.5s ease-in-out infinite;
+}

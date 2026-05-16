@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#070707"/>
+  <path d="M420 420h360c40 0 72 32 72 72v380H348V492c0-40 32-72 72-72z" fill="#121212" stroke="#39ff14" stroke-opacity="0.35" stroke-width="5"/>
+  <rect x="460" y="520" width="280" height="220" rx="40" fill="#181818" stroke="#ffd700" stroke-opacity="0.22" stroke-width="3"/>
+  <text x="470" y="660" font-family="Arial Black, sans-serif" font-size="64" fill="#ffffff" letter-spacing="8">GZDR</text>
+  <text x="470" y="730" font-family="Arial, sans-serif" font-size="34" fill="#ff00aa" opacity="0.72">STYLE</text>
+  <text x="470" y="890" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" opacity="0.45">Crew socks � ne�n</text>
+</svg>

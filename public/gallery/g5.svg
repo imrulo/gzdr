@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1350" viewBox="0 0 1200 1350">
+  <rect width="1200" height="1350" fill="#0a0a0a"/>
+  <rect x="110" y="130" width="980" height="1110" rx="56" fill="#141414" stroke="#ffffff" stroke-opacity="0.10" stroke-width="5"/>
+  <text x="150" y="420" font-family="Arial Black, sans-serif" font-size="86" fill="#ffffff">EL YARI</text>
+  <text x="150" y="540" font-family="Arial Black, sans-serif" font-size="86" fill="#ff00aa">AL FRENTE</text>
+  <text x="150" y="760" font-family="Arial, sans-serif" font-size="36" fill="#39ff14" opacity="0.65">Selecci�n con sabor latino</text>
+</svg>

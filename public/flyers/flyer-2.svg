@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <rect width="1200" height="1500" fill="#050505"/>
+  <circle cx="900" cy="360" r="220" fill="#39ff14" opacity="0.14"/>
+  <circle cx="260" cy="980" r="260" fill="#ff00aa" opacity="0.14"/>
+  <rect x="90" y="90" width="1020" height="1320" rx="44" fill="#0b0b0b" stroke="#ffd700" stroke-opacity="0.35" stroke-width="7"/>
+  <text x="140" y="320" font-family="Arial Black, sans-serif" font-size="76" fill="#39ff14" letter-spacing="16">GOZADERA</text>
+  <text x="140" y="440" font-family="Arial Black, sans-serif" font-size="110" fill="#ffffff">SESSIONS</text>
+  <text x="140" y="620" font-family="Arial, sans-serif" font-size="40" fill="#ff00aa" opacity="0.85">DRUGSTORE � BELGRADE</text>
+  <text x="140" y="1280" font-family="Arial, sans-serif" font-size="34" fill="#ffffff" opacity="0.4">flyer demo � sustituir por arte final</text>
+</svg>

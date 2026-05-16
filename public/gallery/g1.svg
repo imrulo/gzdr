@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <rect width="1200" height="1600" fill="#080808"/>
+  <rect x="60" y="120" width="1080" height="1360" rx="44" fill="#111111" stroke="#39ff14" stroke-opacity="0.22" stroke-width="6"/>
+  <circle cx="780" cy="430" r="160" fill="#ff00aa" opacity="0.12"/>
+  <text x="120" y="560" font-family="Arial Black, sans-serif" font-size="92" fill="#ffffff" letter-spacing="16">G  Z  D  R  I</text>
+  <text x="120" y="660" font-family="Arial, sans-serif" font-size="44" fill="#39ff14" opacity="0.75" letter-spacing="18">STYLE</text>
+  <text x="120" y="860" font-family="Arial, sans-serif" font-size="34" fill="#ffffff" opacity="0.45">Cabina / ne�n / sudor</text>
+</svg>

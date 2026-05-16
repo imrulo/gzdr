@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#070707"/>
+  <rect x="80" y="80" width="1040" height="1040" rx="70" fill="#121212" stroke="#39ff14" stroke-opacity="0.18" stroke-width="6"/>
+  <circle cx="360" cy="360" r="120" fill="#39ff14" opacity="0.12"/>
+  <circle cx="860" cy="820" r="180" fill="#ff00aa" opacity="0.12"/>
+  <text x="140" y="640" font-family="Arial Black, sans-serif" font-size="92" fill="#ffd700" opacity="0.85">BELGRADE</text>
+</svg>

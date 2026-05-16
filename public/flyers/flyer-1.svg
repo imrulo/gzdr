@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="f1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#140014"/>
+      <stop offset="1" stop-color="#071607"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#f1)"/>
+  <rect x="80" y="80" width="1040" height="1340" rx="46" fill="#0a0a0a" stroke="#39ff14" stroke-opacity="0.35" stroke-width="8"/>
+  <text x="120" y="260" font-family="Arial Black, sans-serif" font-size="78" fill="#ff00aa" letter-spacing="18">GZDR LIVE</text>
+  <text x="120" y="360" font-family="Arial Black, sans-serif" font-size="120" fill="#ffffff">PERREO</text>
+  <text x="120" y="500" font-family="Arial Black, sans-serif" font-size="120" fill="#39ff14">CALIENTE</text>
+  <text x="120" y="720" font-family="Arial, sans-serif" font-size="44" fill="#ffd700" opacity="0.85" letter-spacing="10">KABINET � BELGRADE</text>
+  <text x="120" y="820" font-family="Arial, sans-serif" font-size="34" fill="#ffffff" opacity="0.55">El Yari Gozadera + friends</text>
+  <text x="120" y="1320" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" opacity="0.35">gzdr.live</text>
+</svg>

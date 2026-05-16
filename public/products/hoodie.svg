@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="h" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101010"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#h)"/>
+  <path d="M320 350h560c70 0 120 50 120 120v520H380V470c0-66-27-120-60-120z" fill="#121212" stroke="#ffd700" stroke-opacity="0.28" stroke-width="6"/>
+  <path d="M360 420h480v520H360z" fill="#161616" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
+  <text x="380" y="650" font-family="Arial Black, sans-serif" font-size="104" fill="#ffffff" letter-spacing="10">G  Z  D  R  I</text>
+  <text x="380" y="728" font-family="Arial, sans-serif" font-size="40" fill="#39ff14" opacity="0.75" letter-spacing="16">STYLE</text>
+  <text x="380" y="900" font-family="Arial, sans-serif" font-size="34" fill="#ffffff" opacity="0.45">Hoodie pesado � Belgrade nights</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1900" viewBox="0 0 1200 1900">
+  <rect width="1200" height="1900" fill="#050505"/>
+  <rect x="90" y="120" width="1020" height="1660" rx="64" fill="#101010" stroke="#ff00aa" stroke-opacity="0.24" stroke-width="7"/>
+  <text x="140" y="520" font-family="Arial Black, sans-serif" font-size="110" fill="#ffffff" letter-spacing="18" transform="rotate(-4 600 520)">PERREO</text>
+  <text x="140" y="680" font-family="Arial, sans-serif" font-size="44" fill="#39ff14" opacity="0.75">vertical / reel mock</text>
+</svg>
